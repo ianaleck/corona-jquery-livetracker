@@ -26,16 +26,7 @@ $.ajaxSetup({
       myDiv.addClass(settings.theme);
       myDiv.html('<div class="corona-loader"></div>');
     }
-    $(window).scroll(function(e){ 
-      var $el = $('.main_row'); 
-      var isPositionFixed = ($el.css('position') == 'fixed');
-      if ($(this).scrollTop() > 200 && !isPositionFixed){ 
-        $el.css({'position': 'fixed', 'top': '10px', 'left':'30%'}); 
-      }
-      if ($(this).scrollTop() < 200 && isPositionFixed){
-        $el.css({'position': 'static', 'top': '10px', 'left':'30%'}); 
-      } 
-    });
+
     
     var loops = [];
     
@@ -83,15 +74,15 @@ $.ajaxSetup({
               if (settings.type.toLowerCase()=="map") {
                 object.cases = result[i].cases;
               }else{
-                object.cases = result[i].cases.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
+                object.cases = result[i].cases.toLocaleString().replace(/,/g, " ");
               }
               if (result[i].todayCases>0) {
-                object.todayCases = " +"+result[i].todayCases.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
+                object.todayCases = " +"+result[i].todayCases.toLocaleString().replace(/,/g, " ");
               }else{
                 object.todayCases = "";
               }
-              object.deaths = result[i].deaths.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
-              object.recovered = result[i].recovered.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
+              object.deaths = result[i].deaths.toLocaleString().replace(/,/g, " ");
+              object.recovered = result[i].recovered.toLocaleString().replace(/,/g, " ");
               if (result[i].country!=undefined) {
                 object.area = result[i].country;
                 object.flag = result[i].countryInfo.flag;
@@ -119,16 +110,16 @@ $.ajaxSetup({
             if (settings.type.toLowerCase()=="map") {
               object.cases = result.cases;
             }else{
-              object.cases = result.cases.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
+              object.cases = result.cases.toLocaleString().replace(/,/g, " ");
             }
             if (result.todayCases>0) {
-              object.todayCases = " +"+result.todayCases.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
+              object.todayCases = " +"+result.todayCases.toLocaleString().replace(/,/g, " ");
             }else{
               object.todayCases = "";
             }
             
-            object.deaths = result.deaths.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
-            object.recovered = result.recovered.toLocaleString(window.document.documentElement.lang).replace(/,/g, " ");
+            object.deaths = result.deaths.toLocaleString().replace(/,/g, " ");
+            object.recovered = result.recovered.toLocaleString().replace(/,/g, " ");
             if (result.country!=undefined) {
               object.area = result.country;
               object.flag = result.countryInfo.flag;
