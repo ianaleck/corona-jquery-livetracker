@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CoronaTracker</title>
+    <link rel="stylesheet" href="jquery.coronatracker/css/coronatracker.css">
+    <link rel="stylesheet" href="jquery.coronatracker/jquery-jvectormap-2.0.5/jquery-jvectormap-2.0.5.css"> 
+    <script src="jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="jquery.coronatracker/js/jquery.coronatracker.js" charset="utf-8"></script>
+    <script src="jquery.coronatracker/jquery-jvectormap-2.0.5/jquery-jvectormap-2.0.5.min.js" charset="utf-8"></script>
+    <script src="jquery.coronatracker/jquery-jvectormap-2.0.5/jquery-jvectormap-world-mill-en.js" charset="utf-8"></script>
+  </head>
+  <body>
+    
+    <div id="corona_container"></div>
+    
+    <script type="text/javascript">
+      $("#corona_container").coronaTracker({
+        area:"all", // country/countries acceptable are all, summary, or iso2 code, default is summary
+        loop:0, // number of minutes per update, insert 0 to deactivate update
+        theme:"light", // theme dark/light,  default is light
+        title:"World Stats", // title to show on table, default is Coronavirus World Statistics
+        type:"table" // type of data, map or table, default is table
+      }).initialize();
+    </script>
+  </body>
+</html>
