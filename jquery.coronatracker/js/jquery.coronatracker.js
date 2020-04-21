@@ -4,8 +4,10 @@
 * GitHub: https://github.com/ianaleck/corona-jquery-livetracker
 * Credits: JVector & JQuery
 */
-$.ajaxSetup({
-  cache: false
+jQuery(function($) {
+  $.ajaxSetup({
+    cache: false
+  });
 });
 (function($) {
   $.fn.coronaTracker = function(options) {
@@ -21,18 +23,20 @@ $.ajaxSetup({
     var settings = $.extend({}, defaults, options);
     
     var myDiv = $(this);
+    
     if(!myDiv.hasClass("corona-wrapper")){
       myDiv.addClass("corona-wrapper");
       myDiv.addClass(settings.theme);
       myDiv.html('<div class="corona-loader"></div>');
     }
-
-    
+  
+  
     var loops = [];
     
     
     // public methods 
     this.initialize = function() {
+    
       getInfo();
       if ($.isNumeric(settings.loop)&&settings.loop>=1) {
         setInterval(function() {
@@ -184,9 +188,9 @@ $.ajaxSetup({
       settings.loop = 0;
       var countryValues = {};
       for (var cpos = 0; cpos < loops.length; cpos++) {
+        
         countryValues[loops[cpos].country.iso2] = loops[cpos].cases!=undefined?loops[cpos].cases:"No Data";
       }
-      
       
       myDiv.html("");
       myDiv.vectorMap({

@@ -4,7 +4,7 @@
 
 Corona Virus / Covid-19 JQuery Live Tracker is a jquery plugin, built with JQuery's Ajax to get Live data in a table and or map
 
-This project is heavily depended on [jQuery](https://jquery.com/), [jVectorMap](https://jvectormap.com/) and [Novel COVID API](https://jquery.com/).
+This project is heavily depended on [jQuery](https://jquery.com/), [jVectorMap](https://jvectormap.com/) and [Novel COVID API](https://github.com/NovelCovid/API).
 
 ## Installation
 
