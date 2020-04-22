@@ -63,9 +63,9 @@ $("#corona_container").coronaTracker({
 
 ### Configuration Settings
 
-**loop** *'default:all'* 
+**area** *'default:all'* 
 
-expects iso2 code of a country, all or summary. Summary gives total statistics, all returns a list if all countries with their statistics and an iso2 code returns only the statistics of the supplied country. for iso codes visit [IBAN](https://www.iban.com/country-codes) 
+expects iso2 code of a country, all or summary. if you need to select a select few countries just supply the countries iso codes seperated by a comma eg. *us,ca,zw*.  Summary gives total statistics, all returns a list if all countries with their statistics and an iso2 code returns only the statistics of the supplied country. for iso codes visit [IBAN](https://www.iban.com/country-codes) 
 
 **loop** *'default:5'*
 
